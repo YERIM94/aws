@@ -40,6 +40,7 @@ public class aws_server
             else if(command.compareTo("showlogbuffer") == 0)
             {
                 log_generator.show_buffer();
+                
             }
             else if(command.compareTo("netstat") == 0)
             {
@@ -118,6 +119,7 @@ public class aws_server
                 }
             } catch (Exception e)
             {
+            	e.printStackTrace();
                 msg = "Cannot read from S3";
                 success = false;
             }
